@@ -7,7 +7,7 @@ Authors@R:
 Description: Easily install and use tools beyond those that already come
     with the 'devtools' package.
 License: MIT + file LICENSE
-URL: https://maurolepore.github.io/devtoolsplus/
+URL: https://maurolepore.github.io/devtoolsplus/, https://github.com/maurolepore/devtoolsplus
 Depends: 
     fledge,
     reprex,
@@ -16,3 +16,4 @@ Depends:
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+BugReports: https://github.com/maurolepore/devtoolsplus/issues
