@@ -1,0 +1,31 @@
+---
+title: "Universe index"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+```{r echo=FALSE}
+library(dverse)
+
+library(fledge)
+library(reprex)
+library(spelling)
+library(styler)
+
+out1 <- document_universe("fledge", "https://{package}.cynkra.com/reference/{topic}.html")
+out2 <- document_universe("reprex", "https://{package}.tidyverse.org/reference/{topic}.html")
+out3 <- document_universe("spelling", "https://docs.ropensci.org/{package}/reference/{topic}.html")
+out4 <- document_universe("styler", "https://{package}.r-lib.org/reference/{topic}.html")
+out <- dplyr::bind_rows(out1, out2, out3, out4)
+
+out |> 
+  dplyr::select(topic, title, package) |> 
+  DT::datatable(escape = FALSE)
+```
+
